@@ -2,6 +2,10 @@
 
 ![alt text](http://simonsapps.de/labeled_switch_example.png)
 
+<p align="center"> 
+<img src="http://simonsapps.de/labeled_switch_example.png">
+</p>
+
 ## Overview
 
 You can use the SGLabeledSwitch class to create and manage the On/Off buttons used, for example,
