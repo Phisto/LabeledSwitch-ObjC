@@ -1,6 +1,4 @@
-### Labeled Switch
-
-![alt text](http://simonsapps.de/labeled_switch_example.png)
+###### Labeled Switch
 
 <p align="center"> 
 <img src="http://simonsapps.de/labeled_switch_example.png">
