@@ -13,6 +13,7 @@
 		F4D1989D1EE435CF00BF64F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D1989B1EE435CF00BF64F2 /* Main.storyboard */; };
 		F4D1989F1EE435CF00BF64F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D1989E1EE435CF00BF64F2 /* Assets.xcassets */; };
 		F4D198A21EE435CF00BF64F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D198A01EE435CF00BF64F2 /* LaunchScreen.storyboard */; };
+		F4D198AC1EE4399400BF64F2 /* SGLabeledSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D198AB1EE4399400BF64F2 /* SGLabeledSwitch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		F4D1989E1EE435CF00BF64F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4D198A11EE435CF00BF64F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4D198A31EE435CF00BF64F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4D198AA1EE4399400BF64F2 /* SGLabeledSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGLabeledSwitch.h; sourceTree = "<group>"; };
+		F4D198AB1EE4399400BF64F2 /* SGLabeledSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGLabeledSwitch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 				F4D198961EE435CF00BF64F2 /* AppDelegate.m */,
 				F4D198981EE435CF00BF64F2 /* ViewController.h */,
 				F4D198991EE435CF00BF64F2 /* ViewController.m */,
+				F4D198AD1EE439A200BF64F2 /* Source */,
 				F4D1989B1EE435CF00BF64F2 /* Main.storyboard */,
 				F4D1989E1EE435CF00BF64F2 /* Assets.xcassets */,
 				F4D198A01EE435CF00BF64F2 /* LaunchScreen.storyboard */,
@@ -79,6 +83,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F4D198AD1EE439A200BF64F2 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F4D198AA1EE4399400BF64F2 /* SGLabeledSwitch.h */,
+				F4D198AB1EE4399400BF64F2 /* SGLabeledSwitch.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,6 +102,7 @@
 				F4D1988B1EE435CF00BF64F2 /* Sources */,
 				F4D1988C1EE435CF00BF64F2 /* Frameworks */,
 				F4D1988D1EE435CF00BF64F2 /* Resources */,
+				F4D198A91EE435E600BF64F2 /* Increment Build Number */,
 			);
 			buildRules = (
 			);
@@ -146,12 +160,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F4D198A91EE435E600BF64F2 /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F4D1988B1EE435CF00BF64F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F4D1989A1EE435CF00BF64F2 /* ViewController.m in Sources */,
+				F4D198AC1EE4399400BF64F2 /* SGLabeledSwitch.m in Sources */,
 				F4D198971EE435CF00BF64F2 /* AppDelegate.m in Sources */,
 				F4D198941EE435CF00BF64F2 /* main.m in Sources */,
 			);

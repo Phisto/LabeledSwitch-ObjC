@@ -8,7 +8,11 @@
 
 #import "ViewController.h"
 
+#import "SGLabeledSwitch.h"
+
 @interface ViewController ()
+
+@property (nonatomic, strong) IBOutlet SGLabeledSwitch *labeledSwitch;
 
 @end
 
@@ -17,6 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (IBAction)testest:(id)sender {
+ 
+    NSLog(@"JOJOJ");
 }
 
 
