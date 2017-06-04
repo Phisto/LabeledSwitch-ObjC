@@ -32,7 +32,7 @@ No need to configure accessibility label, traits or hint.
     [self.view addSubview:mySwitch];
     ```
 
-##License
+## License
 
 SGLabeledSwitch is released under the GNU General Public License (GPL). 
 
