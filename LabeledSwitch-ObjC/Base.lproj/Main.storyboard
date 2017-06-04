@@ -25,7 +25,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCb-d9-0pj">
                                 <rect key="frame" x="0.0" y="302" width="375" height="63"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsQ-LJ-WHE" userLabel="Switch" customClass="SGLabeledSwitch">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsQ-LJ-WHE" userLabel="Switch" customClass="SGLabeledSwitch">
                                         <rect key="frame" x="16" y="15" width="343" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="Mrc-Wi-VGf"/>
@@ -37,9 +37,18 @@
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
-                                                <real key="value" value="15"/>
+                                                <real key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="value" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textPadding">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="onTint">
+                                                <color key="value" red="0.44973175377234142" green="1" blue="0.30356420928642924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="switchSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="LYZ-6g-cc3"/>

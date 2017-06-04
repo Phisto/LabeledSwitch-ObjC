@@ -1,5 +1,7 @@
 ### Labeled Switch
 
+![alt text](http://simonsapps.de/labeled_switch_example.png)
+
 ## Overview
 
 You can use the SGLabeledSwitch class to create and manage the On/Off buttons used, for example,
