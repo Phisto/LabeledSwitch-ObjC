@@ -135,6 +135,10 @@
 
 - (void)switchValueChanged {
     
+    // we dont use the setter, because the setter will set the switchControl state to the new value
+    // which will confuse the voiceover system.
+    _value = self.switchControl.on;
+    
     // forward the UIControlEventValueChanged event to all registered tagets (IB or programmatically)
     [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
@@ -419,8 +423,17 @@ BOOL rightSwitch;
 
 - (void)accessibility_setSwitchesAccessibility {
     
-    self.switchControl.accessibilityFrame = UIAccessibilityConvertFrameToScreenCoordinates(self.bounds, self);
-    self.switchControl.accessibilityActivationPoint = self.switchControl.center;
+    // voice over selection won't work if the accessibilityFrame is higher than 33.0f points. (hight of uiswitch)
+    // so we check for the hight and center the accessibilityFrame vertically in the 'real' frame
+    CGFloat y_axis = self.frame.origin.y;
+    if (self.frame.size.height > 33) {
+     
+        CGFloat offset = (self.frame.size.height-33.0f)/2.0f;
+        y_axis = y_axis+offset;
+    }
+    
+    CGRect rect = CGRectMake(self.frame.origin.x, y_axis, self.frame.size.width, 33.0f);
+    self.switchControl.accessibilityFrame = UIAccessibilityConvertFrameToScreenCoordinates(rect, self.superview);
 }
 
 
