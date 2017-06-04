@@ -1,3 +1,5 @@
+### Labeled Switch
+
 ## Overview
 
 You can use the SGLabeledSwitch class to create and manage the On/Off buttons used, for example,
