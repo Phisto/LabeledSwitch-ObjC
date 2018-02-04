@@ -1,7 +1,7 @@
 # Labeled Switch
 
 <p align="center"> 
-<img src="http://simonsapps.de/labeled_switch_example.png">
+<img src="http://simonsapps.de/misc/labeled_switch_example.png">
 </p>
 
 ### Overview
